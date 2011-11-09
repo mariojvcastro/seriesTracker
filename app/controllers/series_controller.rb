@@ -1,6 +1,8 @@
 class SeriesController < ApplicationController
   # GET /series
   # GET /series.xml
+
+  
   def index
     @series = Series.all
 
@@ -25,6 +27,8 @@ class SeriesController < ApplicationController
   # GET /series/new.xml
   def new
     @series = Series.new
+    
+    p @series
 
     respond_to do |format|
       format.html # new.html.erb
