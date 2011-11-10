@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  country: MyString
+  number: 1
+  year: 2011-11-10 05:21:41
 
 two:
-  name: MyString
-  country: MyString
+  number: 1
+  year: 2011-11-10 05:21:41

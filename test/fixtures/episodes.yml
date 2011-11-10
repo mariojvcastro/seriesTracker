@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  country: MyString
+  number: 1
+  series: 
+  description: MyText
 
 two:
   name: MyString
-  country: MyString
+  number: 1
+  series: 
+  description: MyText

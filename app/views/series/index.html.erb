@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Country</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,12 +12,15 @@
 <% @series.each do |series| %>
   <tr>
     <td><%= series.name %></td>
+    <td><%= series.country %></td>
     <td><%= link_to 'Show', series %></td>
     <td><%= link_to 'Edit', edit_series_path(series) %></td>
     <td><%= link_to 'Destroy', series, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+
 
 <br />
 

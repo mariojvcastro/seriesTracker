@@ -1,7 +1,21 @@
 SeriesTracker::Application.routes.draw do
-  get "home/index"
 
-  resources :series
+  get "episodes/name:string"
+
+  get "episodes/number:integer"
+
+  get "episodes/season:references"
+
+  get "episodes/description:text"
+
+resources :series do
+  resources :seasons do
+    resources :episodes
+  end
+end
+
+
+  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
