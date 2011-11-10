@@ -13,9 +13,8 @@
   <tr>
     <td><%= season.number %></td>
     <td><%= season.year %></td>
-    <td><%= link_to 'Show', season %></td>
-    <td><%= link_to 'Edit', edit_series_season_path(season) %></td>
-    <td><%= link_to 'Destroy', season, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', series_season_path(:series_id,season) %></td>
+    <td><%= link_to 'Edit', edit_series_season_path(:series_id,season) %></td>
   </tr>
 <% end %>
 </table>

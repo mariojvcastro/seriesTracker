@@ -40,10 +40,11 @@ class SeasonsController < ApplicationController
   # POST /seasons.xml
   def create
     @season = Season.new(params[:season])
-
+    @season.series_id = params[:series_id]
+    puts params
     respond_to do |format|
       if @season.save
-        format.html { redirect_to(@season, :notice => 'Season was successfully created.') }
+        format.html { redirect_to(series_seasons_path(@season.series_id), :notice => 'Season was successfully created.') }
         format.xml  { render :xml => @season, :status => :created, :location => @season }
       else
         format.html { render :action => "new" }
@@ -75,7 +76,7 @@ class SeasonsController < ApplicationController
     @season.destroy
 
     respond_to do |format|
-      format.html { redirect_to(seasons_url) }
+      format.html { redirect_to(series_seasons_path(:series_id)) }
       format.xml  { head :ok }
     end
   end
