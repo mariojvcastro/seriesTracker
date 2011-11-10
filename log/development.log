@@ -11457,3 +11457,94 @@ Started GET "/series/1" for 127.0.0.1 at 2011-11-10 08:46:17 +0000
   [1m[36mSeason Load (0.0ms)[0m  [1mSELECT `seasons`.* FROM `seasons` WHERE (`seasons`.series_id = 1)[0m
 Rendered series/show.html.erb within layouts/application (35.0ms)
 Completed 200 OK in 55ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (78.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (236.0ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateSeries (20111110045319)
+  [1m[35mSQL (110.0ms)[0m  CREATE TABLE `series` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `country` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (31.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111110045319')[0m
+Migrating to CreateEpisodes (20111110050957)
+  [1m[35mSQL (74.0ms)[0m  CREATE TABLE `episodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `number` int(11), `season_id` int(11), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (31.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111110050957')[0m
+Migrating to CreateSeasons (20111110052140)
+  [1m[35mSQL (120.0ms)[0m  CREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `number` int(11), `year` datetime, `series_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111110052140')[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `episodes`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `episodes`
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `seasons`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `seasons`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `series`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `series`
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/series" for 127.0.0.1 at 2011-11-10 10:07:00 +0000
+  Processing by SeriesController#index as HTML
+  [1m[36mSeries Load (1.0ms)[0m  [1mSELECT `series`.* FROM `series`[0m
+Rendered series/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 257ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/series/new" for 127.0.0.1 at 2011-11-10 10:07:10 +0000
+  Processing by SeriesController#new as HTML
+Rendered series/_form.html.erb (20.0ms)
+Rendered series/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 71ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/series" for 127.0.0.1 at 2011-11-10 10:07:18 +0000
+  Processing by SeriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AL5ETe90LrIKU4NsbFmOtc2svYiH2xLPQMcYKvW5FXs=", "series"=>{"name"=>"Heroes", "country"=>"Portugal"}, "commit"=>"Create Series"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.0ms)[0m  describe `series`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `series` (`name`, `country`, `created_at`, `updated_at`) VALUES ('Heroes', 'Portugal', '2011-11-10 10:07:18', '2011-11-10 10:07:18')[0m
+  [1m[35mSQL (31.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/series/1
+Completed 302 Found in 132ms
+
+
+Started GET "/series/1" for 127.0.0.1 at 2011-11-10 10:07:18 +0000
+  Processing by SeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSeries Load (0.0ms)[0m  [1mSELECT `series`.* FROM `series` WHERE `series`.`id` = 1 LIMIT 1[0m
+  [1m[35mSeason Load (0.0ms)[0m  SELECT `seasons`.* FROM `seasons` WHERE (`seasons`.series_id = 1)
+Rendered series/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 107ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/series/1/seasons/new" for 127.0.0.1 at 2011-11-10 10:07:20 +0000
+  Processing by SeasonsController#new as HTML
+  Parameters: {"series_id"=>"1"}
+  [1m[36mSeries Load (1.0ms)[0m  [1mSELECT `series`.* FROM `series` WHERE `series`.`id` = 1 LIMIT 1[0m
+Rendered seasons/_form.html.erb (72.0ms)
+Rendered seasons/new.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 136ms (Views: 111.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/series/1/seasons" for 127.0.0.1 at 2011-11-10 10:07:24 +0000
+  Processing by SeasonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AL5ETe90LrIKU4NsbFmOtc2svYiH2xLPQMcYKvW5FXs=", "season"=>{"number"=>"2", "year(1i)"=>"2011", "year(2i)"=>"11", "year(3i)"=>"10", "year(4i)"=>"10", "year(5i)"=>"07"}, "commit"=>"Create Season", "series_id"=>"1"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `seasons`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `seasons` (`number`, `year`, `series_id`, `created_at`, `updated_at`) VALUES (2, '2011-11-10 10:07:00', NULL, '2011-11-10 10:07:24', '2011-11-10 10:07:24')
+  [1m[36mSQL (39.0ms)[0m  [1mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 84ms
+
+NoMethodError (undefined method `season_url' for #<SeasonsController:0x4e98778>):
+  app/controllers/seasons_controller.rb:46:in `block (2 levels) in create'
+  app/controllers/seasons_controller.rb:44:in `create'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)

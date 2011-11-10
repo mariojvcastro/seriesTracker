@@ -1,13 +1,5 @@
 SeriesTracker::Application.routes.draw do
 
-  get "episodes/name:string"
-
-  get "episodes/number:integer"
-
-  get "episodes/season:references"
-
-  get "episodes/description:text"
-
 resources :series do
   resources :seasons do
     resources :episodes
