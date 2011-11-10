@@ -708,3 +708,178 @@ Started GET "/series" for 127.0.0.1 at Wed Nov 09 11:34:55 +0000 2011
   [1m[35mSeries Load (0.1ms)[0m  SELECT `series`.* FROM `series`
 Rendered series/index.html.erb within layouts/application (5.5ms)
 Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/series/1" for 127.0.0.1 at Wed Nov 09 11:37:36 +0000 2011
+  Processing by SeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSeries Load (0.1ms)[0m  [1mSELECT `series`.* FROM `series` WHERE `series`.`id` = 1 LIMIT 1[0m
+Rendered series/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/series" for 127.0.0.1 at Wed Nov 09 11:37:37 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[35mSeries Load (0.1ms)[0m  SELECT `series`.* FROM `series`
+Rendered series/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /usr/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 10 08:52:25 +0000 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:52:26 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:52:27 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/series" for 127.0.0.1 at Thu Nov 10 08:52:42 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[36mSeries Load (0.3ms)[0m  [1mSELECT `series`.* FROM `series`[0m
+Rendered series/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 83ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:52:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:52:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/series" for 127.0.0.1 at Thu Nov 10 08:53:01 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[35mSeries Load (0.2ms)[0m  SELECT `series`.* FROM `series`
+Rendered series/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:53:01 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:53:01 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/series" for 127.0.0.1 at Thu Nov 10 08:53:40 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[36mSeries Load (0.2ms)[0m  [1mSELECT `series`.* FROM `series`[0m
+Rendered series/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:53:40 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:53:40 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/series" for 127.0.0.1 at Thu Nov 10 08:53:49 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[35mSeries Load (0.1ms)[0m  SELECT `series`.* FROM `series`
+Rendered series/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:53:50 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:53:50 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/series" for 127.0.0.1 at Thu Nov 10 08:54:09 +0000 2011
+  Processing by SeriesController#index as HTML
+  [1m[36mSeries Load (0.1ms)[0m  [1mSELECT `series`.* FROM `series`[0m
+Rendered series/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:54:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:54:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 10 08:54:48 +0000 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/styles/style.css" for 127.0.0.1 at Thu Nov 10 08:54:48 +0000 2011
+
+ActionController::RoutingError (No route matches "/styles/style.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/main-bg.jpg" for 127.0.0.1 at Thu Nov 10 08:54:48 +0000 2011
+
+ActionController::RoutingError (No route matches "/images/main-bg.jpg"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)

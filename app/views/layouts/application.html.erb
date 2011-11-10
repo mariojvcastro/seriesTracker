@@ -1,14 +1,132 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>SeriesTracker</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+<html>	
+	
+	<head>		
+		
+		<meta charset="utf-8">
+		
+		<!-- ADD THE PAGE TITLE BELOW -->
+		<title>seriesTracker</title>
+		  	<%= stylesheet_link_tag :all %>
+  			<%= javascript_include_tag :defaults %>
+  			<%= csrf_meta_tag %>
+		
+		<link rel="stylesheet" href="styles/style.css" />
 
-<%= yield %>
+		
+	</head>
+	
+	<body>
+	
+		<div id="wrap">
+	
+			<div id="header">
+			
+				<h1><a href="index.html" title="Link to Home Page">seriesTracker</a></h1>
+				<h2>Login</h2>
+				
+				<!-- THIS IS THE NAVIGATION AREA -->
+				<ul id="nav">
+				
+					<li><a href="index.html" title="Link to Home Page" class="current">Home</a><span>/</span></li>
+					<li><a href="services.html" title="Link to Services Page">Services</a><span>/</span></li>
+					<li><a href="portfolio.html" title="Link to Portfolio Page">Portfolio</a><span>/</span></li>
+					<li><a href="articles.html" title="Link to Articles Page">Articles</a><span>/</span></li>
+					<li><a href="contact.html" title="Link to Contact Page">Contact</a></li>
+				
+				</ul><!--end nav-->
+			
+			</div><!--end header-->
+			
+			<div id="main" class="frontpage">
+			
+				<!-- ADD THE PAGE INTRO HERE -->			
+				<div id="intro">
+					<br />
+					<%= yield %>
+				<!--
+					<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+				-->
+				</div><!--end intro-->
+				
+				<div id= "content">
+					
 
-</body>
+
+				</div>
+				<!--
+				<div id="featured-projects">
+				
+					<h4>Featured Projects</h4>
+					
+					<!-- ADD LINKS TO YOUR FEATURED PROJECT IMAGES HERE (250x160px)
+					<a href="portfolio.html" title="Featured Project Image"><img src="[ADD IMAGE URL]" class="project-img first" alt="[ADD ALTERNATIVE TEXT FOR IMAGE]" /></a>
+					<a href="portfolio.html" title="Featured Project Image"><img src="[ADD IMAGE URL]" class="project-img" alt="[ADD ALTERNATIVE TEXT FOR IMAGE]" /></a>	
+					<a href="portfolio.html" title="Featured Project Image"><img src="[ADD IMAGE URL]" class="project-img" alt="[ADD ALTERNATIVE TEXT FOR IMAGE]" /></a>
+						
+				</div><!--end featured-projects
+				
+				<div id="overview">
+				
+					<div id="services">
+					
+						<!-- EDIT THE SERVICES SECTION BELOW 
+						<h4>My Services</h4>
+					
+						<div class="service">
+							<p class="title"><a href="services.html" title="Link for Web Design & Development Services">[ADD SERVICE TITLE]</a></p>
+							<p>[ADD SERVICE OVERVIEW]</p>
+						</div><!--end service--
+						
+						<div class="service">
+							<p class="title"><a href="services.html" title="Link for Search Engine Optimisation Services">[ADD SERVICE TITLE]</a></p>
+							<p>[ADD SERVICE OVERVIEW]</p>
+						</div><!--end service
+						
+						<div class="service">
+							<p class="title"><a href="services.html" title="Link for Branding & Social Media Services">[ADD SERVICE TITLE]</a></p>
+							<p>[ADD SERVICE OVERVIEW]</p>
+						</div><!--end service
+					
+					</div><!--end services
+					
+					<div id="articles">
+					
+						<!-- EDIT THE ARTICLES SECTION BELOW --
+						<h4>Latest Articles</h4>
+					
+						<div class="latest-article">
+							<p class="title"><a href="articles.html" title="Link to Clean & Minimal Website Designs Article">[ADD ARTICLE TITLE]</a></p>
+							<p>[ADD ARTICLE OVERVIEW]</p>
+						</div><!--end article--
+						
+						<div class="latest-article">
+							<p class="title"><a href="articles.html" title="Link to Great Tips For Busy Designers Article">[ADD ARTICLE TITLE]</a></p>
+							<p>[ADD ARTICLE OVERVIEW]</p>
+						</div><!--end article--
+						
+						<div class="latest-article">
+							<p class="title"><a href="articles.html" title="Link to Key Skills For An Effective Freelancer">[ADD ARTICLE TITLE]</a></p>
+							<p>[ADD ARTICLE OVERVIEW]</p>
+						</div><!--end article--
+					
+					</div><!--end articles--
+				
+				</div><!--end overview-->
+			
+			</div><!--end main-->
+			
+			<div id="footer">
+			
+				<!-- EDIT THE FOOTER TEXT HERE -->
+				<p>Copyright &copy; 2011 / seriesTracker / All Rights Reserved <a href="[ADD YOUR TWITTER LINK]" title="Link To Twitter" class="twitter">Follow Me On Twitter &raquo;</a></p>
+			
+			</div><!--end footer-->
+		
+		</div><!--end wrap-->
+		
+		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script-->
+	
+	</body>
+	
 </html>
