@@ -1751,3 +1751,426 @@ ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D
   
 
 Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-24 08:40:32 +0000
+  Processing by SeriesController#index as HTML
+  [1m[36mSeries Load (1.0ms)[0m  [1mSELECT `series`.* FROM `series` [0m
+Rendered series/index.html.erb within layouts/application (22.0ms)
+Rendered sessions/new.html.erb (2.0ms)
+Rendered searches/new.html.erb (1.0ms)
+Completed 200 OK in 120ms (Views: 116.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:38 +0000
+Served asset /menuh.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:38 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:38 +0000
+Served asset /style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:38 +0000
+Served asset /scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:38 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:39 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:40:39 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:40 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:40:40 +0000
+Served asset /search3.gif - 304 Not Modified (3ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:40:41 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:40:42 +0000
+Served asset /search1.gif - 304 Not Modified (3ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:40:42 +0000
+Served asset /search2.gif - 304 Not Modified (1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2011-11-24 08:40:49 +0000
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-24 08:40:49 +0000
+  Processing by SeriesController#index as HTML
+  [1m[35mSeries Load (0.0ms)[0m  SELECT `series`.* FROM `series` 
+Rendered series/index.html.erb within layouts/application (6.0ms)
+Rendered sessions/new.html.erb (2.0ms)
+Rendered searches/new.html.erb (1.0ms)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:49 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /menuh.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:50 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:40:51 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:40:52 +0000
+Served asset /search1.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:40:52 +0000
+Served asset /search3.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:40:52 +0000
+Served asset /search2.gif - 304 Not Modified (0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2011-11-24 08:40:53 +0000
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (22.0ms)
+Rendered users/new.html.erb within layouts/application (39.0ms)
+Rendered sessions/new.html.erb (1.0ms)
+Rendered searches/new.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /application.css - 304 Not Modified (50ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /menuh.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:54 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:40:55 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:40:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:40:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:40:56 +0000
+Served asset /search3.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:40:56 +0000
+Served asset /search1.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:40:56 +0000
+Served asset /search2.gif - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-24 08:41:08 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI=", "user"=>{"name"=>"teste", "nationality"=>"teste", "city"=>"teste", "email"=>"teste@hotmail.com", "birthday(1i)"=>"2011", "birthday(2i)"=>"11", "birthday(3i)"=>"24", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM `users` WHERE `users`.`name` = BINARY 'teste' LIMIT 1
+  [1m[36mSQL (12.0ms)[0m  [1mINSERT INTO `users` (`birthday`, `city`, `created_at`, `email`, `hashed_password`, `name`, `nationality`, `reset_password_code`, `reset_password_code_until`, `salt`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["birthday", Thu, 24 Nov 2011], ["city", "teste"], ["created_at", Thu, 24 Nov 2011 08:41:08 UTC +00:00], ["email", "teste@hotmail.com"], ["hashed_password", "ac0b4c3abd952f5048891f2035ef58df9617b0d87258c73c3dda12e0c2580b45"], ["name", "teste"], ["nationality", "teste"], ["reset_password_code", nil], ["reset_password_code_until", nil], ["salt", "406156560.046515039080892495"], ["updated_at", Thu, 24 Nov 2011 08:41:08 UTC +00:00]]
+  [1m[35m (45.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users
+Completed 302 Found in 210ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-24 08:41:08 +0000
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+Rendered users/index.html.erb within layouts/application (13.0ms)
+Rendered sessions/new.html.erb (2.0ms)
+Rendered searches/new.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:41:08 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /scaffold.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /menuh.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:41:09 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:41:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:41:10 +0000
+Served asset /search3.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:41:10 +0000
+Served asset /search1.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:41:10 +0000
+Served asset /search2.gif - 304 Not Modified (1ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-11-24 08:41:33 +0000
+  Processing by SearchController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI=", "keywords"=>"teste", "x"=>"0", "y"=>"0"}
+Mysql::Error: Table 'seriestracker_development.searches' doesn't exist: SHOW FIELDS FROM `searches`
+Completed 500 Internal Server Error in 25ms
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'seriestracker_development.searches' doesn't exist: SHOW FIELDS FROM `searches`):
+  app/controllers/search_controller.rb:8:in `new'
+  app/controllers/search_controller.rb:8:in `create'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-11-24 08:42:33 +0000
+  Processing by SearchController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI=", "keywords"=>"teste", "x"=>"0", "y"=>"0"}
+Mysql::Error: Table 'seriestracker_development.searches' doesn't exist: SHOW FIELDS FROM `searches`
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'seriestracker_development.searches' doesn't exist: SHOW FIELDS FROM `searches`):
+  app/controllers/search_controller.rb:8:in `new'
+  app/controllers/search_controller.rb:8:in `create'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateSeries (20111110045319)
+Migrating to CreateSeasons (20111110052140)
+Migrating to CreateEpisodes (20111113165410)
+Migrating to CreateUsers (20111117095556)
+Migrating to CreateSearches (20111122210900)
+  [1m[35m (130.0ms)[0m  CREATE TABLE `searches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `keywords` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (31.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111122210900')[0m
+Migrating to ForgotPassword (20111123134310)
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.0ms)[0m  [1mSHOW KEYS FROM `episodes`[0m
+  [1m[35m (1.0ms)[0m  SHOW KEYS FROM `searches`
+  [1m[36m (0.0ms)[0m  [1mSHOW KEYS FROM `seasons`[0m
+  [1m[35m (1.0ms)[0m  SHOW KEYS FROM `series`
+  [1m[36m (0.0ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started POST "/search" for 127.0.0.1 at 2011-11-24 08:43:22 +0000
+  Processing by SearchController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI=", "keywords"=>"teste", "x"=>"0", "y"=>"0"}
+  [1m[35mSeries Load (46.0ms)[0m  SELECT `series`.* FROM `series` WHERE (series.name LIKE '%teste%')
+Rendered series/index.html.erb within layouts/application (1.0ms)
+Rendered sessions/new.html.erb (1.0ms)
+Rendered searches/new.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 18.0ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:22 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /menuh.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:23 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:43:24 +0000
+Served asset /search1.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:43:24 +0000
+Served asset /search2.gif - 304 Not Modified (0ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:43:25 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:43:25 +0000
+Served asset /search3.gif - 304 Not Modified (0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-11-24 08:43:27 +0000
+  Processing by SearchController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S0+pcNLjV+tUC4vNjzmKLlLWjONkm8XW816/KYqnzI=", "keywords"=>"teste", "x"=>"0", "y"=>"0"}
+  [1m[36mSeries Load (1.0ms)[0m  [1mSELECT `series`.* FROM `series` WHERE (series.name LIKE '%teste%')[0m
+Rendered series/index.html.erb within layouts/application (0.0ms)
+Rendered sessions/new.html.erb (1.0ms)
+Rendered searches/new.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 31.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:27 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /scaffold.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/menuh.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /menuh.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-24 08:43:28 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/%5BADD%20IMAGE%20URL%5D" for 127.0.0.1 at 2011-11-24 08:43:29 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%5BADD%20IMAGE%20URL%5D"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/search3.gif" for 127.0.0.1 at 2011-11-24 08:43:29 +0000
+Served asset /search3.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search1.gif" for 127.0.0.1 at 2011-11-24 08:43:29 +0000
+Served asset /search1.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search2.gif" for 127.0.0.1 at 2011-11-24 08:43:29 +0000
+Served asset /search2.gif - 304 Not Modified (0ms)
