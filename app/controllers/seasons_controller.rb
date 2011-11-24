@@ -1,8 +1,9 @@
 class SeasonsController < ApplicationController
   # GET /seasons
   # GET /seasons.xml
+  skip_before_filter :authorize
   def index
-    @seasons = Season.all
+    @series=Series.find(params[:series_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +25,9 @@ class SeasonsController < ApplicationController
   # GET /seasons/new
   # GET /seasons/new.xml
   def new
-    @season = Season.new
+    @series=Series.find(params[:series_id])
+    @season = @series.seasons.build
+    #@season = Season.new
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @season }
@@ -40,11 +43,11 @@ class SeasonsController < ApplicationController
   # POST /seasons.xml
   def create
     @season = Season.new(params[:season])
+    @serie = Series.find(params[:series_id])
     @season.series_id = params[:series_id]
-    puts params
     respond_to do |format|
       if @season.save
-        format.html { redirect_to(series_seasons_path(@season.series_id), :notice => 'Season was successfully created.') }
+        format.html { redirect_to(@serie, :notice => 'Season was successfully created.') }
         format.xml  { render :xml => @season, :status => :created, :location => @season }
       else
         format.html { render :action => "new" }
@@ -76,7 +79,7 @@ class SeasonsController < ApplicationController
     @season.destroy
 
     respond_to do |format|
-      format.html { redirect_to(series_seasons_path(:series_id)) }
+      format.html { redirect_to(seasons_url) }
       format.xml  { head :ok }
     end
   end

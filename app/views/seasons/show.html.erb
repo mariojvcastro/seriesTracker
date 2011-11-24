@@ -10,6 +10,12 @@
   <%= @season.year %>
 </p>
 
+<p>
+	Episodes
+</p>
+	<%= render :file => "episodes/index", :locals => { :episodes => @season.episodes, :season => @season, :series => @season.series } %>
 
-<%= link_to 'Edit', edit_season_path(@season) %> |
-<%= link_to 'Back', seasons_path %>
+
+
+<%= link_to 'Edit', edit_series_season_path(@season) %> |
+<%= link_to 'Back', series_seasons_path %>

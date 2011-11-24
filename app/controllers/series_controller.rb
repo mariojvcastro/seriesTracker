@@ -1,7 +1,10 @@
 class SeriesController < ApplicationController
   # GET /series
   # GET /series.xml
+  skip_before_filter :authorize
+  
   def index
+
     @series = Series.all
 
     respond_to do |format|
@@ -41,7 +44,7 @@ class SeriesController < ApplicationController
   # POST /series.xml
   def create
     @series = Series.new(params[:series])
-
+    
     respond_to do |format|
       if @series.save
         format.html { redirect_to(@series, :notice => 'Series was successfully created.') }

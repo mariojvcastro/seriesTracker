@@ -13,7 +13,8 @@
 <h2>Seasons</h2>
 <% @series.seasons.each do |season| %>
   <p>
-    <%= season.number %> ~~~ <%= season.year %>
+  	<%= link_to season.number, series_season_path(@series.id, season.id) %>
+    ~~~ <%= season.year %>
   </p>
 <% end %>
 

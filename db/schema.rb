@@ -10,13 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110052140) do
+ActiveRecord::Schema.define(:version => 20111122210900) do
 
   create_table "episodes", :force => true do |t|
-    t.string   "name"
-    t.integer  "number"
+    t.string   "title"
+    t.date     "inair"
     t.integer  "season_id"
-    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "searches", :force => true do |t|
+    t.string   "keywords"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20111110052140) do
   create_table "series", :force => true do |t|
     t.string   "name"
     t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "hashed_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

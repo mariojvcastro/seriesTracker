@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+
+#keywords div {
+    /* This div will have the left image as a background */
+    background: url(search1.gif) no-repeat left top;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 1;
+    font-size: 0;
+}
+#keywords #keywords {
+    /* Im going to apply a top and bottom border to this input so that it fits with my images and give it the gradient background */
+    border-top:2px solid #999;
+    border-bottom:2px solid #999;
+    border-left:0;
+    border-right:0;
+    background: #fff url(search2.gif) repeat-x top;
+    padding: 3px 2px 2px 0;
+    height: 15px;
+    width: 500px;
+    //font-size: 0;
+}
+#keywords input {
+    /* Some reset styles to make my form elements play nice */
+    vertical-align: top;
+    margin: 0 !important;
+    line-height: 1;
+    outline:0 !important;
+}
