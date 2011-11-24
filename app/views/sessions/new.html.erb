@@ -2,24 +2,41 @@
 	<% if session[:user_id] == nil %>
   <%= form_tag login_path do %>
       <div>
-        <label for="name" >Name:</label>
-        <%= text_field_tag :name, params[:name] %>
-      </div>
-      <div>
-        <label for="password" >Password:</label>
-        <%= password_field_tag :password, params[:password] %>
-      </div>
-        <%= submit_tag "Login" %>
+	  <table >
+	<tr>
+	<td><h7>Username</h7></td>
+	<td> <%= text_field_tag :name, params[:name] %></td>
+	</tr>
+	<tr>
+	<td><h7>Password</h7></td>
+	<td><%= password_field_tag :password, params[:password] %></td>
+	</tr>
+	<tr>
+	<td ALIGN=RIGHT> <%= link_to 'Register', new_user_path %> </td>
+
+	<td ALIGN=RIGHT> <%= submit_tag "Login" %> </td>
+	</tr>
+	<tr ALIGN=RIGHT> <td><%= link_to 'Forgot Password', forgot_password_path %> </td></tr>
+	
+	</table>
   <% end %>
-  <%= button_to "Register", register_path, :method => :get %>
-  <%= button_to "Forgot Password", forgot_password_path , :method => :get %>
 </div>
 	<% else %>
-	Welcome <%= session[:user_name] %> <%= button_to 'Logout', logout_path, :method => :delete %>
-	<div>
-		<%= button_to "Edit Account Information", edit_user_path(session[:user_id]) , :method => :get %>
-		<%= button_to "Delete Account",{:controller => 'users', :action => "destroy" , :id => session[:user_id]} , :confirm => 'Are you sure you want to delete your account? NOTE: This is an irreversible operation!', :method => :delete %>
-
-    </div>
+	
+	<div id="menuh-container">
+		<div id="menuh">
+		<ul>
+			<li><a href="#" class="top_parent"><Item 1><%= session[:user_name] %></a>
+			<ul>
+				<li><%= link_to "Edit Account Information", edit_user_path(session[:user_id]) , :method => :get %></li>
+				<li><%= link_to 'Logout', logout_path, :method => :delete %></a>
+			</ul>
+			</li>
+		</ul>
+		
+		
+		</div> 	<!-- end the menuh-container div -->  
+	</div>	<!-- end the menuh div --> 
 	<% end %>
+
 
