@@ -1,12 +1,35 @@
 SeriesTracker::Application.routes.draw do
 
+controller :sessions do
+  get 'login' => :new
+  post 'login' => :create
+  delete 'logout' => :destroy
+end
+
+controller :search do
+  get 'search' => :new
+  post 'search' => :create
+  
+end
+
+
+controller :users do
+  get 'register' => :new
+  get 'forgot_password' => :insert_forgot_password
+  post 'send_email_forgotten_password' => :forgot_password
+end
+
+resources :users
+
 resources :series do
   resources :seasons do
     resources :episodes
   end
 end
 
-
+  match 'reset_password/:id' => "users#reset_password"
+  match 'edit_user_password/:id' => "users#edit_password"
+  
   get "home/index"
 
   # The priority is based upon order of creation:
@@ -58,7 +81,7 @@ end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "home#index"
+  root :to => "series#index"
 
   # See how all your routes lay out with "rake routes"
 

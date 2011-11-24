@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-SeriesTracker::Application.config.secret_token = '2c445e44306506c6126384046d6c31837a854b74a7ab6da2efd16a47b6db8c9a09b3cb5d12bfa9b44392af1ccaddd5af24f04c4ed69dfeeedb093ebc7110452f'
+SeriesTracker::Application.config.secret_token = '5faa9659732f88330ab669c1b5380d7a64d19be5f1f313d8ce015384b0581c6cdaffe5becd9517f1a4fcac808bce636ae1bcc360f83df819597db2bf15fcbaf3'

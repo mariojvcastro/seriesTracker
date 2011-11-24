@@ -9,15 +9,18 @@
     <th></th>
   </tr>
 
-<% @series=Series.find(params[:series_id]).seasons.each do |season| %>
+<% @series.seasons.each do |season| %>
   <tr>
     <td><%= season.number %></td>
     <td><%= season.year %></td>
-    <td><%= link_to 'Show', series_season_path(:series_id,season) %></td>
-    <td><%= link_to 'Edit', edit_series_season_path(:series_id,season) %></td>
+    <td><%= link_to 'Show', series_season_path(@series.id, season.id) %></td>
+    <!--td>< link_to 'Edit', edit_series_season_path(season) %></td-->
+    <!--td>< link_to 'Destroy', season, :confirm => 'Are you sure?', :method => :delete %></td -->
   </tr>
 <% end %>
+
 </table>
+
 
 <br />
 

@@ -1,0 +1,25 @@
+<div class="depot_form" >
+	<% if session[:user_id] == nil %>
+  <%= form_tag login_path do %>
+      <div>
+        <label for="name" >Name:</label>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+      <div>
+        <label for="password" >Password:</label>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+        <%= submit_tag "Login" %>
+  <% end %>
+  <%= button_to "Register", register_path, :method => :get %>
+  <%= button_to "Forgot Password", forgot_password_path , :method => :get %>
+</div>
+	<% else %>
+	Welcome <%= session[:user_name] %> <%= button_to 'Logout', logout_path, :method => :delete %>
+	<div>
+		<%= button_to "Edit Account Information", edit_user_path(session[:user_id]) , :method => :get %>
+		<%= button_to "Delete Account",{:controller => 'users', :action => "destroy" , :id => session[:user_id]} , :confirm => 'Are you sure you want to delete your account? NOTE: This is an irreversible operation!', :method => :delete %>
+
+    </div>
+	<% end %>
+

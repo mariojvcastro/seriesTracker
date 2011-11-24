@@ -7,11 +7,11 @@
 		
 		<!-- ADD THE PAGE TITLE BELOW -->
 		<title>seriesTracker</title>
-		  	<%= stylesheet_link_tag :all %>
-  			<%= javascript_include_tag :defaults %>
+		  	<%= stylesheet_link_tag "application" %>
+  			<%= javascript_include_tag "application" %>
   			<%= csrf_meta_tag %>
 		
-		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" />
 
 		
 	</head>
@@ -22,18 +22,21 @@
 	
 			<div id="header">
 			
-				<h1><a href="index.html" title="Link to Home Page">seriesTracker</a></h1>
-				<h2>Login</h2>
+				<h1><a href="/series">seriesTracker</a></h1>
+				<h2><%= render :file => "sessions/new" %></h2>
 				
 				<!-- THIS IS THE NAVIGATION AREA -->
 				<ul id="nav">
 				
-					<li><a href="index.html" title="Link to Home Page" class="current">Home</a><span>/</span></li>
+					
+						
+					<%= render :file => "searches/new" %>
+									<!--li><a href="index.html" title="Link to Home Page" class="current">Home</a><span>/</span></li>
 					<li><a href="services.html" title="Link to Services Page">Services</a><span>/</span></li>
 					<li><a href="portfolio.html" title="Link to Portfolio Page">Portfolio</a><span>/</span></li>
 					<li><a href="articles.html" title="Link to Articles Page">Articles</a><span>/</span></li>
 					<li><a href="contact.html" title="Link to Contact Page">Contact</a></li>
-				
+				-->
 				</ul><!--end nav-->
 			
 			</div><!--end header-->
@@ -42,6 +45,13 @@
 			
 				<!-- ADD THE PAGE INTRO HERE -->			
 				<div id="intro">
+					<% if flash[:alert] %>
+					  <p id="notice" ><%= flash[:alert] %></p>
+					<% end %>
+					<% if notice %>
+					  <p id="notice" ><%= notice %></p>
+					<% end %>
+
 					
 					<%= yield %>
 				<!--
