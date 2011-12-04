@@ -6,6 +6,14 @@ validates :password, :confirmation => true
 attr_accessor :password_confirmation
 attr_reader   :password
 validate   :password_must_be_present
+has_many  :sent, 
+                :class_name => "Message",
+                :foreign_key  => "sent_id"
+has_many  :received, 
+                :class_name => "Message", 
+                :foreign_key  => "received_id"
+
+
 
 def User.authenticate(name, password)
   if user = find_by_name(name)

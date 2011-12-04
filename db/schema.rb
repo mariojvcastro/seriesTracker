@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111123134310) do
+ActiveRecord::Schema.define(:version => 20111204161645) do
 
   create_table "episodes", :force => true do |t|
     t.string   "title"
@@ -19,6 +20,23 @@ ActiveRecord::Schema.define(:version => 20111123134310) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "to_id"
+    t.integer  "from_id"
+    t.datetime "date"
+    t.string   "subject"
+    t.text     "content"
+    t.boolean  "bdeleted_from", :default => false
+    t.boolean  "bdeleted_to",   :default => false
+    t.boolean  "bread_from",    :default => false
+    t.boolean  "bread_to",      :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["from_id"], :name => "index_messages_on_from_id"
+  add_index "messages", ["to_id"], :name => "index_messages_on_to_id"
 
   create_table "searches", :force => true do |t|
     t.string   "keywords"

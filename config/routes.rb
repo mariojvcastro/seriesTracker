@@ -12,12 +12,20 @@ controller :search do
   
 end
 
-
 controller :users do
   get 'register' => :new
   get 'forgot_password' => :insert_forgot_password
   post 'send_email_forgotten_password' => :forgot_password
 end
+
+controller :messages do
+  get 'sent_messages' => :index_sent
+  get 'sent_messages/show' => :show_sent
+  post 'delete_from' => :delete_from
+  post 'delete_to' => :delete_to
+end
+
+resources :messages
 
 resources :users
 

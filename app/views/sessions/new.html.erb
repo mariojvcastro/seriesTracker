@@ -28,6 +28,8 @@
 		<ul>
 			<li><a href="#" class="top_parent"><Item 1><%= session[:user_name] %></a>
 			<ul>
+				<li><%= link_to "Outbox", sent_messages_path , :method => :get %></li>
+				<li><%= link_to "Inbox", messages_path , :method => :get %></li>
 				<li><%= link_to "Edit Account Information", edit_user_path(session[:user_id]) , :method => :get %></li>
 				<li><%= link_to 'Logout', logout_path, :method => :delete %></a>
 			</ul>
