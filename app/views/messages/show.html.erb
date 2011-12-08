@@ -1,0 +1,22 @@
+
+<p>
+  <b>From:</b>
+  <%= @message.to.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @message.date %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @message.subject %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @message.content %>
+</p>
+
+<%= link_to 'Back', messages_path %>

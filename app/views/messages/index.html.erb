@@ -1,0 +1,38 @@
+<h1>Listing received messages</h1>
+<%if not @messages.empty? %>
+<table>
+  <tr>
+    <th>From</th>
+    <th>Date</th>
+    <th>Subject</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @messages.each do |message| %>
+  <tr>
+  	<% if message.bread_to == false and message.bdeleted_to == false %>
+    <td><b><%= message.from.name %></b></td>
+    <td><b><%= message.date %></b></td>
+    <td><b><%= message.subject %></b></td>
+    <td><b><%= link_to 'Show', message %></b></td>
+    <td><b><%= link_to 'Destroy', {:action=>"delete_to", :controller=>"messages", :id => message.id} , :method => :post  %></b></td>
+  	<%else%>	
+  	<td><%= message.from.name %></td>
+    <td><%= message.date %></td>
+    <td><%= message.subject %></td>
+    <td><%= link_to 'Show', message %></td>
+    <td><%= link_to 'Destroy', {:action=>"delete_to", :controller=>"messages", :id => message.id} , :method => :post  %></td> 	
+  	<%end%>
+  </tr>
+<% end %>
+</table>
+
+
+<%else%>
+<p id="notice" >No messages</p>
+<%end%>
+
+
+<br />
+<%= link_to 'New Message', new_message_path %>
