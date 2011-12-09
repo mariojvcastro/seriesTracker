@@ -1,27 +1,16 @@
-<h1>Listing seasons</h1>
-
-<table>
-  <tr>
-    <th>Number</th>
-    <th>Year</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @series.seasons.each do |season| %>
-  <tr>
-    <td><%= season.number %></td>
-    <td><%= season.year %></td>
-    <td><%= link_to 'Show', series_season_path(@series.id, season.id) %></td>
-    <!--td>< link_to 'Edit', edit_series_season_path(season) %></td-->
-    <!--td>< link_to 'Destroy', season, :confirm => 'Are you sure?', :method => :delete %></td -->
-  </tr>
+
+<div id = "season">
+<a href="#" class="show_hide">>>>>> <%= season.number %> <%= season.year %> </a>
+<div class="slidingDiv">
+	<% @episodes = season.episodes %>
+<%= render :file => "episodes/index2", :collection => @episodes %>
+<br />
+<%= link_to season.number, series_season_path(@series.id, season.id) %></div>
+</div>
+
 <% end %>
 
-</table>
 
 
-<br />
-
-<%= link_to 'New Season', new_series_season_path(@series=Series.find(params[:series_id])) %>
+<!--%= link_to 'New Season', new_series_season_path(@series=Series.find(params[:id])) %-->

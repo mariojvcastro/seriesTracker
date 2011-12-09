@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @series.name %>
+  <h2><%= @series.name %><h2>
 </p>
 
 <p>
@@ -10,14 +9,9 @@
   <%= @series.country %>
 </p>
 
-<h2>Seasons</h2>
-<% @series.seasons.each do |season| %>
-  <p>
-  	<%= link_to season.number, series_season_path(@series.id, season.id) %>
-    ~~~ <%= season.year %>
-  </p>
-<% end %>
+<h3>Seasons</h3>
 
+<%= render :file => "seasons/index", :collection => @series %>
 
 
 <%= link_to 'New Season', new_series_season_path(@series) %>
