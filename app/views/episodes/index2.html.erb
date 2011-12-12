@@ -3,15 +3,17 @@
 <% @season = season if defined?season %>
 
 <h4> Episodes </h4>
-
+	<table>
+	<tr>
+		<td>#</td>
+	    <td>Episode</td>
+	    <td>Air date</td>
+	</tr>
 	<% @episodes.each do |episode| %>
 	<tr>
+		<td align="CENTER"><%= episode.number %></td>
 	    <td><%= episode.title %></td>
 	    <td><%= episode.inair %></td>
-	    <td><%= episode.season.number %></td>
-	    <td><%= link_to 'Show', series_season_episode_path(episode.season.series.id, episode.season.id, episode) %></td>
-	    <td><%= link_to 'Edit', edit_series_season_episode_path(episode.season.series.id, episode.season.id, episode) %></td>
-	    <td><%= link_to 'Destroy', series_season_episode_path(episode.season.series.id, episode.season.id, episode), :confirm => 'Are you sure?', :method => :delete %></td>
 	</tr>
-<% end %>
-	
+	<% end %>
+	</table>

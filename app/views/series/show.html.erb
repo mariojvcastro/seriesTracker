@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
-
+<div style = float: left; position=relative;>
 <p>
-  <h2><%= @series.name %><h2>
+  <h2><%= @series.name %> (<%= @series.country %>)<h2>
 </p>
 
 <p>
-  <b>Country:</b>
-  <%= @series.country %>
+  <b>Started:</b>
+  <%= @series.start_date %>
 </p>
-
+<p><b>Status:</b> <%= @series.status %></p>
+<p><b>Runtime: </b> <%= @series.runtime %></p>
+</div>
+<div id="serieimage">
+<%if @series.image_url %>
+<img src="<%= @series.image_url %>" alt="<%= @series.name %>" />
+<%end%>
+</div>
 <h3>Seasons</h3>
 
 <%= render :file => "seasons/index", :collection => @series %>
