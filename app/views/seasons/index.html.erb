@@ -1,7 +1,7 @@
 <% @series.seasons.each do |season| %>
 
 <div id = "season">
-<a href="#" class="show_hide">>>>>> <%= season.number %> <%= season.year %> </a>
+<a href="#" class="show_hide">>>>>> <%= season.number %> </a>
 <div class="slidingDiv">
 	<% @episodes = season.episodes %>
 <%= render :file => "episodes/index2", :collection => @episodes %>
