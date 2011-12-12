@@ -5,7 +5,7 @@ class SeriesController < ApplicationController
   
   def index
 
-    @series = Series.all
+    @series = Series.paginate :page=>params[:page], :per_page => 30
 
     respond_to do |format|
       format.html # index.html.erb
