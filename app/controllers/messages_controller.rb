@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @messages }
+      format.json { render :json=> @messages }
     end
   end
 
@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @messages }
+      format.json { render :json => @messages }
     end
   end
 
@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
     
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @message }
+      format.json { render :json=> @message }
     end
   end
 
@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
     
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @message }
+      format.json { render :json=> @message }
     end
   end
 
@@ -50,7 +50,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @message }
+      format.json { render :json => @message }
     end
   end
 
@@ -69,11 +69,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render json: @message, status: :created, location: @message }
+        format.html { redirect_to @message, :notice => 'Message was successfully created.' }
+        format.json { render :json => @message, :status => :created, :location => @message }
       else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @message.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -85,11 +85,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.update_attributes(params[:message])
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
+        format.html { redirect_to @message, :notice => 'Message was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @message.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -106,11 +106,11 @@ class MessagesController < ApplicationController
      else
        respond_to do |format|
         if @message.update_attributes(:bdeleted_from => true)
-          format.html { redirect_to sent_messages_url, notice: 'Message was successfully deleted.' }
+          format.html { redirect_to sent_messages_url, :notice => 'Message was successfully deleted.' }
           format.json { head :ok }
         else
-          format.html { render action: "edit" }
-          format.json { render json: @message.errors, status: :unprocessable_entity }
+          format.html { render :action => "edit" }
+          format.json { render :json => @message.errors, :status => :unprocessable_entity }
         end
     end     
   end
@@ -128,11 +128,11 @@ class MessagesController < ApplicationController
      else
        respond_to do |format|
         if @message.update_attributes(:bdeleted_to => true)
-          format.html { redirect_to messages_url, notice: 'Message was successfully deleted.' }
+          format.html { redirect_to :messages_url, :notice => 'Message was successfully deleted.' }
           format.json { head :ok }
         else
-          format.html { render action: "edit" }
-          format.json { render json: @message.errors, status: :unprocessable_entity }
+          format.html { render :action => "edit" }
+          format.json { render :json => @message.errors, :status => :unprocessable_entity }
         end
     end     
   end
