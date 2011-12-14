@@ -12,7 +12,8 @@ has_many  :sent,
 has_many  :received, 
                 :class_name => "Message", 
                 :foreign_key  => "received_id"
-
+has_many :favorites, :dependent => :destroy
+has_many :series, :through => :favorites
 
 
 def User.authenticate(name, password)

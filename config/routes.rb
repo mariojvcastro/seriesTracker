@@ -35,6 +35,9 @@ resources :series do
   end
 end
 
+  post "favorites/create"
+  post "favorites/destroy"
+  
   match 'reset_password/:id' => "users#reset_password"
   match 'edit_user_password/:id' => "users#edit_password"
   

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111210175707) do
+ActiveRecord::Schema.define(:version => 20111214113620) do
 
   create_table "episodes", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20111210175707) do
     t.integer  "number"
     t.string   "screen_cap"
   end
+
+  create_table "favorites", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "series_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "favorites", ["series_id"], :name => "index_favorites_on_series_id"
+  add_index "favorites", ["user_id"], :name => "index_favorites_on_user_id"
 
   create_table "messages", :force => true do |t|
     t.integer  "to_id"
