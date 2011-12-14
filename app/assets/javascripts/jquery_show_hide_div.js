@@ -7,7 +7,7 @@ $(document).ready(function(){
         $(".show_hide").show();
 
 	$('.show_hide').click(function(){
-       $(this).next(".slidingDiv").slideToggle();
+       $(this).nextAll(".slidingDiv").slideToggle();
 	});
 });
 

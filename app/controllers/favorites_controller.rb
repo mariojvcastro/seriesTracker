@@ -24,6 +24,17 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find(:first, :conditions => ['user_id = ? AND series_id = ?', session[:user_id], params[:series_id]])
     @favorite.destroy
+    respond_to do |format|
+    format.html { redirect_to :back, :notice => "Removed" ,:alert => "Removed" }
+    end
     #redirect_to current_user, :notice => 'Eliminado.'
+  end
+  
+  def index
+    @user = current_user
+    respond_to do |format|
+        format.html { }
+        
+      end
   end
 end

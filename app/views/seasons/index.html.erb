@@ -6,7 +6,8 @@
 	<% @episodes = season.episodes %>
 <%= render :file => "episodes/index2", :collection => @episodes %>
 <br />
-<%= link_to season.number, series_season_path(@series.id, season.id) %></div>
+<%= link_to season.number, series_season_path(@series.id, season.id) %>
+</div>
 </div>
 	
 <% end %>

@@ -37,7 +37,7 @@ end
 
   post "favorites/create"
   post "favorites/destroy"
-  
+  get "favorites/index"
   match 'reset_password/:id' => "users#reset_password"
   match 'edit_user_password/:id' => "users#edit_password"
   

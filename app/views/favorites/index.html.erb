@@ -1,0 +1,17 @@
+<h1>Your favorite series</h1>
+
+
+<% @user.series.each do |series| %>
+
+	<div id = "season">
+	<a href="#" class="show_hide"> <%= series.name %> (<%= series.country%>) </a> <%= link_to image_tag('icon_remove.png'), favorites_destroy_path(:series_id => series.id), :method => :post %>
+	<div class="slidingDiv">
+	<% series.seasons.each do |season|%>
+			<br /> <%= link_to 'Season '<<season.number.to_s, series_season_path(series.id, season.id) %><br />
+			<% @episodes = season.episodes %>
+			<%= render :file => "episodes/index2", :collection => @episodes %>
+		<br />
+	<%end%>	
+	</div>
+	</div>
+<% end %>
