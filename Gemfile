@@ -18,6 +18,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test, :development do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'ffi', " = 1.0.9"
+end
+
 gem 'jquery-rails'
 gem 'will_paginate', '>= 3.0.pre'
 # To use ActiveModel has_secure_password
