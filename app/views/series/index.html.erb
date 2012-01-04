@@ -2,27 +2,35 @@
 
 
 
-<h1>Listing series</h1>
+<h1>Series</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Country</th>
-    <th><%=params[:keywords]%></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @series.each do |series| %>
-  <tr>
+  <!--tr>
     <td><%= series.name %></td>
     <td><%= series.country %></td>
     <td><%= link_to 'Show', series %></td>
     <td><%= link_to 'Edit', edit_series_path(series) %></td>
     <td><%= link_to 'Destroy', series, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  </tr-->
+  
+  	<div id="post_series">
+		
+			<% if series.image_url %>
+				<img src="<%= series.image_url %>" width="143" height="143" alt="" class="alignleft border" />			
+			<%else%>
+				<img src="http://www.nmh.ie/iopen24/images/content_images/other/warning.jpg" width="143" height="143" alt="" class="alignleft border" />
+			<%end%>
+
+			<div id ="descprip">
+				<h3><%= link_to series.name, series %></h3>
+				<p><b>#Seasons: </b> <%= series.seasons.count%></p>
+				<p><b>Status:</b> <%= series.status%> </p>
+			</div>
+	</div>
 <% end %>
-</table>
+
 
 <%= will_paginate @series, :params => {:keywords => params[:keywords] } %>
 
@@ -30,4 +38,3 @@
 
 <br />
 
-<%= link_to 'New Series', new_series_path %>

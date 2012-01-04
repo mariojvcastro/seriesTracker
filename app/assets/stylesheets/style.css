@@ -29,6 +29,16 @@ ol { margin: 15px 0 15px 20px; list-style-type: decimal; }
 strong, b { font-weight: bold; }
 .hide { display: none; }
 
+
+#col { color:white; }
+#col td { width : 450px;}
+#col th {background-color:white;color:gray;}
+tr{text-align : center;}
+th{background-color:gray;color:white; width : 200px;}
+#post_series img {margin: 0px 20px 20px 0px; float:left;}
+#post_series_view img {margin: 0px 20px 20px 0px; float:left;}
+#icons {float:right;}
+
 /* ------------ */
 /* -- Layout -- */
 /* ------------ */
@@ -122,3 +132,54 @@ strong, b { font-weight: bold; }
 /* ------------ */
 #footer { clear: both; border-top: 1px #ddd dotted; margin: 40px 0 0 0; padding: 5px 0 0 0; color: #aaa; }
 #footer .twitter { float: right; }
+
+
+
+#post_series {
+	width: 968px;
+	min-height:143px;
+	//border:2px solid gray;
+	margin: 0px 0px 0px 0px;
+	padding: 15px;
+}
+
+#post_series sideimg {
+	float:right;
+}
+
+
+
+#post_series descprip {
+	float: right;
+	width: 820px;
+	height: 150px;
+	background:#9E0616;
+	left: 150px;
+}
+
+#post_series_view {
+	width: 1000px;
+	min-height:250px;
+	border:2px solid gray;
+	margin: 0px 0px 0px 0px;
+	padding: 15px 0px 0px 0px;
+} 
+
+#post_series_view img{
+	margin: 0px 20px 20px 20px; 
+	float:left;
+} 
+
+#post_series_view sideimg {
+	float:right;
+}
+
+
+
+#post_series_view descprip {
+	float: right;
+	width: 820px;
+	height: 150px;
+	background:#9E0616;
+	left: 150px;
+}
