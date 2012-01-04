@@ -1,23 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  sender: 
-  from: 
-  date: 2011-12-04 16:16:45
-  subject: MyString
-  content: MyText
-  bdeleted_from: false
-  b_deleted_to: false
-  bread_from: false
-  bread_to: false
-
-two:
-  sender: 
-  from: 
-  date: 2011-12-04 16:16:45
-  subject: MyString
-  content: MyText
-  bdeleted_from: false
-  b_deleted_to: false
-  bread_from: false
-  bread_to: false

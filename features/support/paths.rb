@@ -11,6 +11,9 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/'
       
+    when /^the series "([^"]*)" page$/
+      series_path(:id => Series.find_by_name($1))
+      
     #when /^the (.*)'s profile page$/
     #  users_show_path(:id => User.find_by_username($1).id)
 

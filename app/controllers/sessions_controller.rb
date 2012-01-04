@@ -9,12 +9,12 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     session[:user_name] = user.name
     redirect_to root_url
-  else
-    redirect_to root_url, :alert => "Invalid user/password combination"
-  end
+    else
+      redirect_to root_url, :alert => "Invalid user/password combination"
+    end
 
   end
-
+  
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out"

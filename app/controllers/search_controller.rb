@@ -5,8 +5,7 @@ class SearchController < ApplicationController
   def new
     
     #@search = Search.find(params[:id])
-    puts "params ---- 111"
-    puts params
+    
     @search = Search.new
     @search.keywords = params[:keywords]
     @series = @search.series.paginate({:page => params[:page], :per_page => 30})

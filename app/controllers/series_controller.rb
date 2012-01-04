@@ -17,8 +17,9 @@ class SeriesController < ApplicationController
   # GET /series/1.xml
   def show
     @series = Series.find(params[:id])
-    @user = current_user
-    
+    if session[:user_id]
+      @user = current_user
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @series }
