@@ -1,10 +1,9 @@
-<p id="notice"><%= notice %></p>
 <div style = float: left; position=relative;>
 <p>
-  <h2><%= @series.name %> (<%= @series.country %>) 
+  <h2 id="series_name" data-seriesid=<%= @series.id %> ><%= @series.name %> (<%= @series.country %>) 
   	<% if session[:user_id] != nil  %>
   	 <% if @user.favorites.find_by_series_id(@series.id) %>
- 	 	<%= link_to image_tag('star_delete.png'), favorites_destroy_path(:series_id => @series.id), :method => :post, :remote => true, :id => "favourite", "STYLE"=>"border-bottom-style: none; border-bottom-width: 0px;" %>
+ 	 	<%= link_to image_tag('star_delete.png'), favorites_destroy_path(:series_id => @series.id), :method => :post, :remote => true, :id => "unfavourite", "STYLE"=>"border-bottom-style: none; border-bottom-width: 0px;" %>
   	 <% else %>
  	 	<%= link_to image_tag('star_add2.png'), favorites_create_path(:series_id => @series.id), :method => :post, :remote => true, :id => "favourite", "STYLE"=>"border-bottom-style: none; border-bottom-width: 0px;"  %>
  	 <% end %>
@@ -27,8 +26,4 @@
 
 <%= render :file => "seasons/index", :collection => @series %>
 
-
-<%= link_to 'New Season', new_series_season_path(@series) %>
-<%= link_to 'Edit', edit_series_path(@series) %>
-<%= link_to 'Back', series_index_path %>
 

@@ -26,6 +26,7 @@ class FavoritesController < ApplicationController
     @favorite.destroy
     respond_to do |format|
     format.html { redirect_to :back, :notice => "Removed" ,:alert => "Removed" }
+    format.js { }
     end
     #redirect_to current_user, :notice => 'Eliminado.'
   end
