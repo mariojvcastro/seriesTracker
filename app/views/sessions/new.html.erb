@@ -32,7 +32,7 @@
 				<li><%= link_to "Outbox", sent_messages_path , :method => :get %></li>
 				<li><%= link_to "Inbox", messages_path , :method => :get %></li>
 				<li><%= link_to "Edit Account Information", edit_user_path(session[:user_id]) , :method => :get %></li>
-				<li><%= link_to 'Logout', logout_path, :method => :delete %></a>
+				<li><%= link_to 'Logout', logout_path, :method => :delete, :id => 'Logout' %></a>
 			</ul>
 			</li>
 		</ul>

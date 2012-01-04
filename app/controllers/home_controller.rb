@@ -9,10 +9,6 @@ class HomeController < ApplicationController
     @series_thr = Episode.find_all_by_inair(@date+3)
     @series_fri = Episode.find_all_by_inair(@date+4)
     @series_sat = Episode.find_all_by_inair(@date+5)
-    @series_sun = Episode.find_all_by_inair(@date+6)
-    
-    
-    
+    @series_sun = Episode.find_all_by_inair(@date+6)    
   end
-
 end

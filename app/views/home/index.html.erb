@@ -9,7 +9,7 @@
 	<table>
 	<tr>
 		<td align="CENTER" style="background-color: #F0F0F0;">Monday <br />(<%= @date %>)</td>
-		<td align="CENTER" style="background-color: #E0E0E0;">Tuesday <br /> (<%= @date+1 %>) </td>	
+		<td align="CENTER" style="background-color: #E0E0E0;"> <%if @today == (@date+1)%><b><%end%>Tuesday<%if @today == (@date+1)%></b><%end%> <br /> (<%= @date+1 %>) </td>	
 		<td align="CENTER" style="background-color: #F0F0F0";>Wednesday<br /> (<%= @date+2 %>)</td>
 		<td align="CENTER" style="background-color: #E0E0E0;">Thursday <br />(<%= @date+3 %>) </td>	
 		<td align="CENTER" style="background-color: #F0F0F0";>Friday <br />(<%= @date+4 %>)</td>
