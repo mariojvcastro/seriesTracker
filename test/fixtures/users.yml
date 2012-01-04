@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 5
+  name: Bernardo
+  hashed_password: 222
+  salt: 333
+  nationality: Portuguese
+  city: Porto
+  birthday: 26-05-1988
+  email: ei06094@fe.up.pt
+
+two:
+  id: 2
+  name: Benny
+  hashed_password: 222
+  salt: 333
+  nationality: Portuguese
+  city: Porto
+  birthday: 26-05-1988
+  email: ei06094@fe.up.pt 

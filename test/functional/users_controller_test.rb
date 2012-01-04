@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class MessagesControllerTest < ActionController::TestCase
+class UsersControllerTest < ActionController::TestCase
   def login_as(user)
    @request.session[:user_id] = user.id ? user.id : nil
   end
  
     
   setup do
-    @message = messages(:one)
+    @user = users(:one)
   end
 
   test "should get index" do
@@ -30,44 +30,47 @@ class MessagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create message" do
-    user = users(:one)
-    login_as(user)
-    assert_difference('Message.count') do
-      post :create, message: @message.attributes
+  test "should create user" do
+    user2 = User.find(@user.id)
+    assert_nil(user2)
+    assert_difference('User.count') do
+      post :create, message: @user.attributes
     end
-
-    assert_redirected_to message_path(assigns(:message))
   end
 
-  test "should show message" do
+   test "should not create user" do
     user = users(:one)
     login_as(user)
-    get :show, id: @message.to_param
+    user2 = User.find(@user.id)
+    assert_not_nil(user2)
+  end
+
+
+  test "should show user" do
+    user = users(:one)
+    login_as(user)
+    get :show, id: @user.to_param
     assert_response :success
   end
 
   test "should get edit" do
     user = users(:one)
     login_as(user)
-    get :edit, id: @message.to_param
+    get :edit, id: @user.to_param
     assert_response :success
   end
 
-  test "should update message" do
+  test "should update user" do
     user = users(:one)
     login_as(user)
-    put :update, id: @message.to_param, message: @message.attributes
-    assert_redirected_to message_path(assigns(:message))
+    put :update, id: @user.to_param, message: @user.attributes
   end
 
-  test "should destroy message" do
-        user = users(:one)
+  test "should destroy user" do
+    user = users(:one)
     login_as(user)
-    assert_difference('Message.count', -1) do
-      delete :destroy, id: @message.to_param
+    assert_difference('User.count', -1) do
+      delete :destroy, id: @user.to_param
     end
-
-    assert_redirected_to messages_path
   end
 end
